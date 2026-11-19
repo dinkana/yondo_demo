@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Маршрут Капова">
+  <defs>
+    <linearGradient id="caveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B968C;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#5C6B60;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="240" fill="#E4EDE0"/>
+  
+  <path d="M100 180 Q150 120 200 140 T300 100" stroke="#3F6B4A" stroke-width="3" fill="none" stroke-dasharray="6 4" filter="url(#shadow)"/>
+  
+  <path d="M180 140 L200 110 L230 115 L245 140 L235 165 L210 170 L190 160 Z" fill="url(#caveGrad)" opacity="0.7"/>
+  
+  <circle cx="100" cy="180" r="10" fill="#C98F3B" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="100" y="205" font-family="Inter" font-size="12" font-weight="500" fill="#16211A" text-anchor="middle">Вход</text>
+  
+  <circle cx="220" cy="140" r="10" fill="#B4432E" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="220" y="85" font-family="Inter" font-size="12" font-weight="500" fill="#16211A" text-anchor="middle">Зал рисунков</text>
+  
+  <rect x="140" y="15" width="120" height="28" rx="14" fill="#FFFFFF" opacity="0.9"/>
+  <text x="200" y="34" font-family="Manrope" font-size="13" font-weight="600" fill="#16211A" text-anchor="middle">5 км · пещера</text>
+</svg>

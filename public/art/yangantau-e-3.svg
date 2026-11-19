@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="800" height="600">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c48f78"/><stop offset="1" stop-color="#f6d6a2"/></linearGradient>
+        <linearGradient id="ground" x2=".35" y2="1"><stop stop-color="#535c43"/><stop offset="1" stop-color="#293f37"/></linearGradient>
+        <linearGradient id="water" x2="0" y2="1"><stop stop-color="#f6d6a2"/><stop offset=".45" stop-color="#8d774f"/><stop offset="1" stop-color="#293f37"/></linearGradient>
+        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".68" numOctaves="3" stitchTiles="stitch"/></filter></defs>
+<path fill="url(#sky)" d="M0 0H960V720H0Z"/>
+<circle cx="550" cy="211" r="62" fill="#f6d6a2" opacity=".52"/><circle cx="550" cy="211" r="44" fill="#f6d6a2"/>
+<path d="M421 175q112 -11 347 -3" fill="none" stroke="#f6d6a2" stroke-width="4" opacity=".22"/>
+<path d="M71 280q37 -11 338 -3" fill="none" stroke="#f6d6a2" stroke-width="3" opacity=".22"/>
+<path d="M-22 287q95 -11 312 -3" fill="none" stroke="#f6d6a2" stroke-width="4" opacity=".22"/>
+<path d="M616 255q80 -11 184 -3" fill="none" stroke="#f6d6a2" stroke-width="1" opacity=".22"/>
+<path d="M-5 218q81 -11 225 -3" fill="none" stroke="#f6d6a2" stroke-width="1" opacity=".22"/>
+<path d="M172 190q99 -11 192 -3" fill="none" stroke="#f6d6a2" stroke-width="1" opacity=".22"/>
+<path d="M507 244q106 -11 363 -3" fill="none" stroke="#f6d6a2" stroke-width="2" opacity=".22"/>
+<path d="M282 305q59 -11 334 -3" fill="none" stroke="#f6d6a2" stroke-width="2" opacity=".22"/>
+<path d="M138 151q95 -11 268 -3" fill="none" stroke="#f6d6a2" stroke-width="2" opacity=".22"/>
+<path d="M258 162q113 -11 288 -3" fill="none" stroke="#f6d6a2" stroke-width="3" opacity=".22"/>
+<path d="M386 102q54 -11 166 -3" fill="none" stroke="#f6d6a2" stroke-width="2" opacity=".22"/>
+<path d="M414 206q31 -11 236 -3" fill="none" stroke="#f6d6a2" stroke-width="1" opacity=".22"/>
+<path d="M149 270q112 -11 347 -3" fill="none" stroke="#f6d6a2" stroke-width="1" opacity=".22"/>
+<path d="M0,318 L32,333 L64,331 L96,316 L128,343 L160,322 L192,361 L224,362 L256,408 L288,435 L320,441 L352,449 L384,429 L416,418 L448,425 L480,370 L512,354 L544,347 L576,305 L608,295 L640,326 L672,324 L704,316 L736,315 L768,340 L800,365 L832,353 L864,359 L896,348 L928,356 L960,366 L960 720H0Z" fill="#a69472"/>
+<path d="M64,331 L96,316 59,381 69,433Z" fill="#293f37" opacity=".11"/>
+<path d="M160,322 L192,361 155,426 165,424Z" fill="#293f37" opacity=".11"/>
+<path d="M256,408 L288,435 251,500 261,510Z" fill="#293f37" opacity=".11"/>
+<path d="M288,435 L320,441 283,506 293,537Z" fill="#293f37" opacity=".11"/>
+<path d="M384,429 L416,418 379,483 389,531Z" fill="#293f37" opacity=".11"/>
+<path d="M448,425 L480,370 443,435 453,527Z" fill="#293f37" opacity=".11"/>
+<path d="M480,370 L512,354 475,419 485,472Z" fill="#293f37" opacity=".11"/>
+<path d="M512,354 L544,347 507,412 517,456Z" fill="#293f37" opacity=".11"/>
+<path d="M544,347 L576,305 539,370 549,449Z" fill="#293f37" opacity=".11"/>
+<path d="M576,305 L608,295 571,360 581,407Z" fill="#293f37" opacity=".11"/>
+<path d="M640,326 L672,324 635,389 645,428Z" fill="#293f37" opacity=".11"/>
+<path d="M672,324 L704,316 667,381 677,426Z" fill="#293f37" opacity=".11"/>
+<path d="M704,316 L736,315 699,380 709,418Z" fill="#293f37" opacity=".11"/>
+<path d="M736,315 L768,340 731,405 741,417Z" fill="#293f37" opacity=".11"/>
+<path d="M800,365 L832,353 795,418 805,467Z" fill="#293f37" opacity=".11"/>
+<path d="M832,353 L864,359 827,424 837,455Z" fill="#293f37" opacity=".11"/>
+<path d="M864,359 L896,348 859,413 869,461Z" fill="#293f37" opacity=".11"/>
+<path d="M896,348 L928,356 891,421 901,450Z" fill="#293f37" opacity=".11"/>
+<path d="M0,393 L32,394 L64,406 L96,375 L128,379 L160,411 L192,411 L224,420 L256,405 L288,442 L320,460 L352,464 L384,475 L416,501 L448,511 L480,499 L512,474 L544,461 L576,413 L608,410 L640,371 L672,376 L704,368 L736,351 L768,369 L800,360 L832,378 L864,401 L896,425 L928,408 L960,415 L960 720H0Z" fill="#8d774f"/>
+<path d="M96,375 L128,379 91,444 101,477Z" fill="#293f37" opacity=".11"/>
+<path d="M128,379 L160,411 123,476 133,481Z" fill="#293f37" opacity=".11"/>
+<path d="M160,411 L192,411 155,476 165,513Z" fill="#293f37" opacity=".11"/>
+<path d="M256,405 L288,442 251,507 261,507Z" fill="#293f37" opacity=".11"/>
+<path d="M288,442 L320,460 283,525 293,544Z" fill="#293f37" opacity=".11"/>
+<path d="M320,460 L352,464 315,529 325,562Z" fill="#293f37" opacity=".11"/>
+<path d="M384,475 L416,501 379,566 389,577Z" fill="#293f37" opacity=".11"/>
+<path d="M544,461 L576,413 539,478 549,563Z" fill="#293f37" opacity=".11"/>
+<path d="M576,413 L608,410 571,475 581,515Z" fill="#293f37" opacity=".11"/>
+<path d="M640,371 L672,376 635,441 645,473Z" fill="#293f37" opacity=".11"/>
+<path d="M736,351 L768,369 731,434 741,453Z" fill="#293f37" opacity=".11"/>
+<path d="M768,369 L800,360 763,425 773,471Z" fill="#293f37" opacity=".11"/>
+<path d="M800,360 L832,378 795,443 805,462Z" fill="#293f37" opacity=".11"/>
+<path d="M832,378 L864,401 827,466 837,480Z" fill="#293f37" opacity=".11"/>
+<path d="M864,401 L896,425 859,490 869,503Z" fill="#293f37" opacity=".11"/>
+<path d="M928,408 L960,415 923,480 933,510Z" fill="#293f37" opacity=".11"/>
+<path d="M0,442 L32,413 L64,393 L96,402 L128,420 L160,415 L192,413 L224,454 L256,464 L288,466 L320,470 L352,486 L384,499 L416,493 L448,507 L480,522 L512,533 L544,555 L576,539 L608,537 L640,547 L672,522 L704,512 L736,479 L768,474 L800,420 L832,399 L864,382 L896,405 L928,410 L960,391 L960 720H0Z" fill="#535c43"/>
+<path d="M0,442 L32,413 -5,478 5,544Z" fill="#293f37" opacity=".11"/>
+<path d="M32,413 L64,393 27,458 37,515Z" fill="#293f37" opacity=".11"/>
+<path d="M64,393 L96,402 59,467 69,495Z" fill="#293f37" opacity=".11"/>
+<path d="M96,402 L128,420 91,485 101,504Z" fill="#293f37" opacity=".11"/>
+<path d="M160,415 L192,413 155,478 165,517Z" fill="#293f37" opacity=".11"/>
+<path d="M224,454 L256,464 219,529 229,556Z" fill="#293f37" opacity=".11"/>
+<path d="M320,470 L352,486 315,551 325,572Z" fill="#293f37" opacity=".11"/>
+<path d="M352,486 L384,499 347,564 357,588Z" fill="#293f37" opacity=".11"/>
+<path d="M384,499 L416,493 379,558 389,601Z" fill="#293f37" opacity=".11"/>
+<path d="M416,493 L448,507 411,572 421,595Z" fill="#293f37" opacity=".11"/>
+<path d="M448,507 L480,522 443,587 453,609Z" fill="#293f37" opacity=".11"/>
+<path d="M480,522 L512,533 475,598 485,624Z" fill="#293f37" opacity=".11"/>
+<path d="M544,555 L576,539 539,604 549,657Z" fill="#293f37" opacity=".11"/>
+<path d="M576,539 L608,537 571,602 581,641Z" fill="#293f37" opacity=".11"/>
+<path d="M608,537 L640,547 603,612 613,639Z" fill="#293f37" opacity=".11"/>
+<path d="M640,547 L672,522 635,587 645,649Z" fill="#293f37" opacity=".11"/>
+<path d="M672,522 L704,512 667,577 677,624Z" fill="#293f37" opacity=".11"/>
+<path d="M704,512 L736,479 699,544 709,614Z" fill="#293f37" opacity=".11"/>
+<path d="M768,474 L800,420 763,485 773,576Z" fill="#293f37" opacity=".11"/>
+<path d="M800,420 L832,399 795,464 805,522Z" fill="#293f37" opacity=".11"/>
+<path d="M832,399 L864,382 827,447 837,501Z" fill="#293f37" opacity=".11"/>
+<path d="M864,382 L896,405 859,470 869,484Z" fill="#293f37" opacity=".11"/>
+<path d="M0 558Q156 495 311 557T563 594Q763 508 960 516V720H0Z" fill="url(#ground)"/>
+<path d="M348 720Q498 624 600 617T640 579q91 21 -34 63t-114 78Z" fill="#da9e62" opacity=".78"/>
+<path d="M56 611l7 25h-3l3 12h-14l3 -12h-3Z" fill="#535c43"/>
+<path d="M126 543l3 10h-1l1 4h-6l1 -4h-1Z" fill="#8d774f"/>
+<path d="M320 649l9 33h-4l4 15h-18l4 -15h-4Z" fill="#8d774f"/>
+<path d="M798 577l4 14h-2l2 7h-8l2 -7h-2Z" fill="#8d774f"/>
+<path d="M15 657l8 27h-4l4 12h-16l4 -12h-4Z" fill="#293f37"/>
+<path d="M915 568l6 22h-3l3 10h-12l3 -10h-3Z" fill="#293f37"/>
+<path d="M327 646l8 29h-4l4 14h-16l4 -14h-4Z" fill="#535c43"/>
+<path d="M57 568l8 27h-4l4 12h-16l4 -12h-4Z" fill="#293f37"/>
+<path d="M697 584l5 18h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M689 622l7 25h-3l3 12h-14l3 -12h-3Z" fill="#293f37"/>
+<path d="M239 586l2 7h-1l1 3h-4l1 -3h-1Z" fill="#293f37"/>
+<path d="M732 559l7 23h-3l3 11h-14l3 -11h-3Z" fill="#293f37"/>
+<path d="M731 669l5 19h-2l2 9h-10l2 -9h-2Z" fill="#8d774f"/>
+<path d="M239 567l5 17h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M715 562l5 17h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M325 634l9 31h-4l4 15h-18l4 -15h-4Z" fill="#8d774f"/>
+<path d="M79 580l5 17h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M36 684l8 27h-4l4 13h-16l4 -13h-4Z" fill="#8d774f"/>
+<path d="M782 646l7 25h-3l3 12h-14l3 -12h-3Z" fill="#535c43"/>
+<path d="M743 634l7 26h-3l3 12h-14l3 -12h-3Z" fill="#293f37"/>
+<path d="M277 651l5 19h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M727 709l6 22h-3l3 10h-12l3 -10h-3Z" fill="#8d774f"/>
+<path d="M229 571l4 13h-2l2 6h-8l2 -6h-2Z" fill="#8d774f"/>
+<path d="M48 554l5 17h-2l2 8h-10l2 -8h-2Z" fill="#8d774f"/>
+<path d="M179 686l6 22h-3l3 10h-12l3 -10h-3Z" fill="#535c43"/>
+<path d="M900 622l2 8h-1l1 3h-4l1 -3h-1Z" fill="#293f37"/>
+<path d="M779 614l4 14h-2l2 6h-8l2 -6h-2Z" fill="#293f37"/>
+<path d="M857 558l2 7h-1l1 3h-4l1 -3h-1Z" fill="#293f37"/>
+<path d="M905 561l3 10h-1l1 5h-6l1 -5h-1Z" fill="#8d774f"/>
+<path d="M738 618l11 37h-5l5 17h-22l5 -17h-5Z" fill="#293f37"/>
+<path d="M158 654l10 34h-5l5 16h-20l5 -16h-5Z" fill="#293f37"/>
+<path d="M27 612l9 31h-4l4 14h-18l4 -14h-4Z" fill="#8d774f"/>
+<path d="M262 556l7 23h-3l3 11h-14l3 -11h-3Z" fill="#535c43"/>
+<path d="M150 585l3 12h-1l1 6h-6l1 -6h-1Z" fill="#535c43"/>
+<path d="M108 647l6 21h-3l3 10h-12l3 -10h-3Z" fill="#535c43"/>
+<path d="M924 686l9 31h-4l4 14h-18l4 -14h-4Z" fill="#293f37"/>
+<path d="M787 592l9 32h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M872 616l12 41h-6l6 19h-24l6 -19h-6Z" fill="#535c43"/>
+<path d="M66 663l5 19h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M236 643l5 17h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M310 637l13 46h-6l6 21h-26l6 -21h-6Z" fill="#293f37"/>
+<path d="M698 649l10 36h-5l5 16h-20l5 -16h-5Z" fill="#293f37"/>
+<path d="M125 551l4 14h-2l2 7h-8l2 -7h-2Z" fill="#293f37"/>
+<path d="M776 573l9 31h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M13 683l9 30h-4l4 14h-18l4 -14h-4Z" fill="#535c43"/>
+<path d="M893 595l4 14h-2l2 6h-8l2 -6h-2Z" fill="#8d774f"/>
+<path d="M50 706l5 19h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M790 601l6 21h-3l3 9h-12l3 -9h-3Z" fill="#293f37"/>
+<path d="M98 697l8 29h-4l4 14h-16l4 -14h-4Z" fill="#293f37"/>
+<path d="M30 600l6 21h-3l3 10h-12l3 -10h-3Z" fill="#535c43"/>
+<path d="M840 590l10 36h-5l5 17h-20l5 -17h-5Z" fill="#535c43"/>
+<path d="M178 657l13 46h-6l6 21h-26l6 -21h-6Z" fill="#293f37"/>
+<path d="M176 676l4 14h-2l2 7h-8l2 -7h-2Z" fill="#535c43"/>
+<path d="M214 548l3 11h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M821 636l4 16h-2l2 7h-8l2 -7h-2Z" fill="#293f37"/>
+<path d="M91 604l3 11h-1l1 5h-6l1 -5h-1Z" fill="#535c43"/>
+<path d="M843 607l2 8h-1l1 4h-4l1 -4h-1Z" fill="#293f37"/>
+<path d="M247 616l9 30h-4l4 14h-18l4 -14h-4Z" fill="#535c43"/>
+<path d="M915 621l9 31h-4l4 15h-18l4 -15h-4Z" fill="#8d774f"/>
+<path d="M896 534l4 16h-2l2 7h-8l2 -7h-2Z" fill="#535c43"/>
+<path d="M309 684l10 36h-5l5 17h-20l5 -17h-5Z" fill="#535c43"/>
+<path d="M889 616l9 32h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M761 646l12 40h-6l6 19h-24l6 -19h-6Z" fill="#293f37"/>
+<path d="M209 643l9 31h-4l4 14h-18l4 -14h-4Z" fill="#8d774f"/>
+<path d="M862 637l9 33h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M686 654l15 52h-7l7 24h-30l7 -24h-7Z" fill="#293f37"/>
+<path d="M860 554l5 17h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M176 556l3 11h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M731 562l3 12h-1l1 5h-6l1 -5h-1Z" fill="#535c43"/>
+<path d="M863 582l5 17h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M852 584l3 11h-1l1 5h-6l1 -5h-1Z" fill="#535c43"/>
+<path d="M168 541l6 20h-3l3 9h-12l3 -9h-3Z" fill="#293f37"/>
+<path d="M17 630l2 8h-1l1 4h-4l1 -4h-1Z" fill="#535c43"/>
+<path d="M119 546l4 14h-2l2 7h-8l2 -7h-2Z" fill="#293f37"/>
+<path d="M876 554l4 16h-2l2 7h-8l2 -7h-2Z" fill="#293f37"/>
+<path d="M63 587l6 20h-3l3 9h-12l3 -9h-3Z" fill="#535c43"/>
+<path d="M327 611l3 10h-1l1 4h-6l1 -4h-1Z" fill="#535c43"/>
+<path d="M805 663l10 34h-5l5 16h-20l5 -16h-5Z" fill="#293f37"/>
+<path d="M732 645l2 9h-1l1 4h-4l1 -4h-1Z" fill="#8d774f"/>
+<path d="M810 651l3 10h-1l1 4h-6l1 -4h-1Z" fill="#293f37"/>
+<path d="M754 598l9 33h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M789 667l4 14h-2l2 6h-8l2 -6h-2Z" fill="#293f37"/>
+<path d="M757 565l4 14h-2l2 6h-8l2 -6h-2Z" fill="#8d774f"/>
+<path d="M875 718l4 16h-2l2 7h-8l2 -7h-2Z" fill="#535c43"/>
+<path d="M207 545l5 18h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M77 667l7 26h-3l3 12h-14l3 -12h-3Z" fill="#8d774f"/>
+<path d="M264 550l3 10h-1l1 5h-6l1 -5h-1Z" fill="#535c43"/>
+<path d="M243 631l6 21h-3l3 9h-12l3 -9h-3Z" fill="#8d774f"/>
+<path d="M60 677l13 44h-6l6 20h-26l6 -20h-6Z" fill="#293f37"/>
+<path d="M241 684l6 22h-3l3 10h-12l3 -10h-3Z" fill="#293f37"/>
+<path d="M227 670l9 33h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M276 691l8 28h-4l4 13h-16l4 -13h-4Z" fill="#293f37"/>
+<path d="M725 670l14 48h-7l7 22h-28l7 -22h-7Z" fill="#293f37"/>
+<path d="M55 628l5 19h-2l2 9h-10l2 -9h-2Z" fill="#8d774f"/>
+<path d="M205 610l11 40h-5l5 18h-22l5 -18h-5Z" fill="#293f37"/>
+<path d="M98 685l9 31h-4l4 15h-18l4 -15h-4Z" fill="#535c43"/>
+<path d="M150 706l5 17h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M131 570l3 12h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M150 620l5 19h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M872 670l7 23h-3l3 11h-14l3 -11h-3Z" fill="#293f37"/>
+<path d="M209 684l7 25h-3l3 12h-14l3 -12h-3Z" fill="#535c43"/>
+<path d="M320 561l7 25h-3l3 11h-14l3 -11h-3Z" fill="#535c43"/>
+<path d="M863 636l7 25h-3l3 12h-14l3 -12h-3Z" fill="#535c43"/>
+<path d="M811 674l3 11h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M159 625l12 42h-6l6 19h-24l6 -19h-6Z" fill="#293f37"/>
+<path d="M110 649l11 38h-5l5 18h-22l5 -18h-5Z" fill="#8d774f"/>
+<path d="M887 648l4 15h-2l2 7h-8l2 -7h-2Z" fill="#535c43"/>
+<path d="M805 649l13 44h-6l6 21h-26l6 -21h-6Z" fill="#293f37"/>
+<path d="M23 536l5 18h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M797 594l11 40h-5l5 18h-22l5 -18h-5Z" fill="#535c43"/>
+<path d="M740 649l8 27h-4l4 13h-16l4 -13h-4Z" fill="#8d774f"/>
+<path d="M28 612l3 10h-1l1 5h-6l1 -5h-1Z" fill="#8d774f"/>
+<path d="M823 598l10 36h-5l5 17h-20l5 -17h-5Z" fill="#8d774f"/>
+<path d="M137 622l8 29h-4l4 14h-16l4 -14h-4Z" fill="#535c43"/>
+<path d="M764 616l4 13h-2l2 6h-8l2 -6h-2Z" fill="#535c43"/>
+<path d="M891 551l4 16h-2l2 7h-8l2 -7h-2Z" fill="#8d774f"/>
+<path d="M181 631l6 21h-3l3 10h-12l3 -10h-3Z" fill="#535c43"/>
+<path d="M290 581l3 11h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M83 666l3 10h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M237 629l10 36h-5l5 17h-20l5 -17h-5Z" fill="#8d774f"/>
+<path d="M84 692l5 19h-2l2 9h-10l2 -9h-2Z" fill="#8d774f"/>
+<path d="M940 552l3 10h-1l1 4h-6l1 -4h-1Z" fill="#293f37"/>
+<path d="M146 618l12 43h-6l6 20h-24l6 -20h-6Z" fill="#293f37"/>
+<path d="M150 639l14 48h-7l7 23h-28l7 -23h-7Z" fill="#535c43"/>
+<path d="M897 579l4 16h-2l2 7h-8l2 -7h-2Z" fill="#293f37"/>
+<path d="M902 624l5 18h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M768 535l4 13h-2l2 6h-8l2 -6h-2Z" fill="#535c43"/>
+<path d="M99 540l4 16h-2l2 7h-8l2 -7h-2Z" fill="#535c43"/>
+<path d="M745 583l10 36h-5l5 17h-20l5 -17h-5Z" fill="#293f37"/>
+<path d="M279 601l7 23h-3l3 11h-14l3 -11h-3Z" fill="#8d774f"/>
+<path d="M762 580l4 15h-2l2 7h-8l2 -7h-2Z" fill="#293f37"/>
+<path d="M52 593l6 21h-3l3 10h-12l3 -10h-3Z" fill="#535c43"/>
+<path d="M825 571l6 21h-3l3 10h-12l3 -10h-3Z" fill="#8d774f"/>
+<path d="M898 641l6 20h-3l3 9h-12l3 -9h-3Z" fill="#293f37"/>
+<path d="M796 668l4 13h-2l2 6h-8l2 -6h-2Z" fill="#8d774f"/>
+<path d="M48 624l3 12h-1l1 5h-6l1 -5h-1Z" fill="#535c43"/>
+<path d="M287 617l10 36h-5l5 16h-20l5 -16h-5Z" fill="#293f37"/>
+<path d="M892 677l4 13h-2l2 6h-8l2 -6h-2Z" fill="#535c43"/>
+<path d="M190 638l3 11h-1l1 5h-6l1 -5h-1Z" fill="#293f37"/>
+<path d="M270 622l6 20h-3l3 9h-12l3 -9h-3Z" fill="#293f37"/>
+<path d="M329 561l4 14h-2l2 6h-8l2 -6h-2Z" fill="#535c43"/>
+<path d="M840 702l7 26h-3l3 12h-14l3 -12h-3Z" fill="#293f37"/>
+<path d="M20 590l6 23h-3l3 10h-12l3 -10h-3Z" fill="#293f37"/>
+<path d="M840 570l7 24h-3l3 11h-14l3 -11h-3Z" fill="#535c43"/>
+<path d="M252 597l12 41h-6l6 19h-24l6 -19h-6Z" fill="#293f37"/>
+<path d="M808 654l3 12h-1l1 5h-6l1 -5h-1Z" fill="#8d774f"/>
+<path d="M326 635l10 34h-5l5 16h-20l5 -16h-5Z" fill="#535c43"/>
+<path d="M57 620l5 18h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M672 671l5 19h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M141 610l8 27h-4l4 12h-16l4 -12h-4Z" fill="#8d774f"/>
+<path d="M262 681l3 11h-1l1 5h-6l1 -5h-1Z" fill="#8d774f"/>
+<path d="M710 590l5 19h-2l2 8h-10l2 -8h-2Z" fill="#535c43"/>
+<path d="M736 583l3 10h-1l1 4h-6l1 -4h-1Z" fill="#293f37"/>
+<path d="M206 622l3 12h-1l1 5h-6l1 -5h-1Z" fill="#8d774f"/>
+<path d="M177 575l4 16h-2l2 7h-8l2 -7h-2Z" fill="#8d774f"/>
+<path d="M864 659l8 27h-4l4 12h-16l4 -12h-4Z" fill="#535c43"/>
+<path d="M688 679l10 36h-5l5 16h-20l5 -16h-5Z" fill="#293f37"/>
+<path d="M924 540l4 14h-2l2 6h-8l2 -6h-2Z" fill="#8d774f"/>
+<path d="M190 541l5 18h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M293 704l5 19h-2l2 9h-10l2 -9h-2Z" fill="#535c43"/>
+<path d="M923 590l9 33h-4l4 15h-18l4 -15h-4Z" fill="#293f37"/>
+<path d="M719 594l6 20h-3l3 9h-12l3 -9h-3Z" fill="#8d774f"/>
+<path d="M939 692l5 18h-2l2 8h-10l2 -8h-2Z" fill="#8d774f"/>
+<path d="M830 676l12 41h-6l6 19h-24l6 -19h-6Z" fill="#8d774f"/>
+<path d="M61 567l7 24h-3l3 11h-14l3 -11h-3Z" fill="#535c43"/>
+<path d="M851 539l5 18h-2l2 8h-10l2 -8h-2Z" fill="#8d774f"/>
+<path d="M869 586l6 20h-3l3 9h-12l3 -9h-3Z" fill="#8d774f"/>
+<path d="M199 589l6 21h-3l3 9h-12l3 -9h-3Z" fill="#535c43"/>
+<path d="M724 626l2 8h-1l1 3h-4l1 -3h-1Z" fill="#8d774f"/>
+<path d="M302 598l10 36h-5l5 17h-20l5 -17h-5Z" fill="#8d774f"/>
+<path d="M229 558l4 14h-2l2 6h-8l2 -6h-2Z" fill="#535c43"/>
+<path d="M266 634l6 22h-3l3 10h-12l3 -10h-3Z" fill="#8d774f"/>
+<path d="M909 645l14 49h-7l7 23h-28l7 -23h-7Z" fill="#293f37"/>
+<path d="M927 615l10 36h-5l5 16h-20l5 -16h-5Z" fill="#8d774f"/>
+<path d="M273 607l2 9h-1l1 4h-4l1 -4h-1Z" fill="#8d774f"/>
+<path d="M270 595l5 18h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M303 586l3 10h-1l1 4h-6l1 -4h-1Z" fill="#293f37"/>
+<path d="M86 617l6 22h-3l3 10h-12l3 -10h-3Z" fill="#293f37"/>
+<path d="M334 693l8 28h-4l4 13h-16l4 -13h-4Z" fill="#535c43"/>
+<path d="M781 614l13 44h-6l6 21h-26l6 -21h-6Z" fill="#535c43"/>
+<path d="M881 720l4 13h-2l2 6h-8l2 -6h-2Z" fill="#293f37"/>
+<path d="M217 688l6 20h-3l3 9h-12l3 -9h-3Z" fill="#8d774f"/>
+<path d="M734 708l5 19h-2l2 8h-10l2 -8h-2Z" fill="#293f37"/>
+<path d="M724 624l5 18h-2l2 8h-10l2 -8h-2Z" fill="#8d774f"/>
+<path d="M870 648l17 59h-8l8 28h-34l8 -28h-8Z" fill="#293f37"/>
+<path d="M209 607l6 23h-3l3 10h-12l3 -10h-3Z" fill="#293f37"/>
+<path d="M327 564l6 22h-3l3 10h-12l3 -10h-3Z" fill="#8d774f"/>
+<path d="M335 559l4 14h-2l2 6h-8l2 -6h-2Z" fill="#293f37"/>
+<path d="M470 243q6 -3 12 3q7 -6 14 -5" fill="none" stroke="#293f37" stroke-opacity=".64" stroke-width="1.8"/>
+<path d="M499 230q6 -3 12 3q7 -6 14 -5" fill="none" stroke="#293f37" stroke-opacity=".64" stroke-width="1.8"/>
+<path d="M528 217q6 -3 12 3q7 -6 14 -5" fill="none" stroke="#293f37" stroke-opacity=".64" stroke-width="1.8"/>
+<path d="M0 0H960V720H0Z" filter="url(#grain)" opacity=".13" style="mix-blend-mode:multiply"/>
+</svg>

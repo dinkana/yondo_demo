@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Маршрут Янгантау">
+  <defs>
+    <linearGradient id="resortGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A9CBA3;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#CBDEC5;stop-opacity:0.3" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="240" fill="#E4EDE0"/>
+  
+  <rect x="100" y="90" width="200" height="100" rx="12" fill="url(#resortGrad)"/>
+  
+  <circle cx="200" cy="140" r="10" fill="#B4432E" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="200" y="205" font-family="Inter" font-size="12" font-weight="500" fill="#16211A" text-anchor="middle">Курорт</text>
+  
+  <rect x="140" y="15" width="120" height="28" rx="14" fill="#FFFFFF" opacity="0.9"/>
+  <text x="200" y="34" font-family="Manrope" font-size="13" font-weight="600" fill="#16211A" text-anchor="middle">5 км · этно</text>
+</svg>

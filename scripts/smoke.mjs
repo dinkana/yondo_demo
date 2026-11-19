@@ -1,0 +1,125 @@
+import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
+import { mkdir, readFile } from 'node:fs/promises'
+import { join } from 'node:path'
+import { chromium } from 'playwright'
+
+const base = new URL(process.env.DEMO_URL ?? 'http://127.0.0.1:4318/yondo_demo/')
+const dir = process.env.DEMO_QA_DIR ?? 'qa-output'
+await mkdir(dir, { recursive: true })
+const browser = await chromium.launch({
+  channel: process.env.BROWSER_CHANNEL || undefined,
+  ...(process.env.CHROME_PATH && { executablePath: process.env.CHROME_PATH })
+})
+function visible(locator) { return locator.filter({ visible: true }).first() }
+async function imageReady(locator) {
+  await locator.scrollIntoViewIfNeeded()
+  await locator.evaluate(async image => { await image.decode() })
+}
+try {
+  for (const [name, viewport] of Object.entries({ desktop: { width: 1440, height: 950 }, mobile: { width: 375, height: 812 } })) {
+    const started = Date.now()
+    const context = await browser.newContext({ viewport, acceptDownloads: true, reducedMotion: 'reduce', serviceWorkers: 'block', hasTouch: name === 'mobile' })
+    const page = await context.newPage()
+    page.setDefaultTimeout(10000)
+    const errors = [], external = [], httpErrors = []
+    page.on('pageerror', error => errors.push(error.message))
+    page.on('console', message => { if (message.type() === 'error') errors.push(message.text()) })
+    page.on('response', response => { if (response.status() >= 400) httpErrors.push(`${response.status()}: ${response.url()}`) })
+    await context.route('**/*', route => {
+      if (new URL(route.request().url()).origin === base.origin) return route.continue()
+      external.push(route.request().url())
+      return route.abort()
+    })
+    await page.goto(base.href)
+    await page.getByRole('heading', { name: 'Авторские туры по Южному Уралу' }).waitFor()
+    const search = page.getByRole('searchbox', {name:'Поиск туров'})
+    await search.fill('Иремель для всей семьи')
+    await page.getByRole('heading', { name: 'Иремель для всей семьи', exact: true }).waitFor()
+    await page.waitForFunction(() => document.querySelectorAll('a[href*="/tour/"]').length < 14)
+    await search.fill('')
+    await page.waitForFunction(() => document.querySelectorAll('a[href*="/tour/"]').length === 14)
+    await page.screenshot({ path: join(dir, `catalog-${name}.png`) })
+    if (name === 'mobile') {
+      await page.getByRole('button', { name: 'Все фильтры' }).click()
+      await page.getByRole('button', { name: '1 день', exact: true }).click()
+      await page.getByRole('button', { name: 'Применить' }).click()
+    } else {
+      await page.getByRole('button', { name: '1 день', exact: true }).click()
+    }
+    await page.getByRole('heading', { name: 'Озеро Зюраткуль', exact: true }).waitFor()
+    assert.equal(await page.getByRole('heading', { name: 'Иремель для всей семьи', exact: true }).count(), 0)
+    await page.goto(new URL('?days=2-3&type=caves,peaks&kids=1&max=15000', base).href)
+    const family = page.getByRole('link').filter({ has: page.getByRole('heading', { name: 'Иремель для всей семьи' }) })
+    await family.waitFor()
+    assert.equal(await page.locator('a[href*="/tour/"]').count(), 4)
+    assert.equal(await page.getByRole('heading', { name: 'Нугушское водохранилище' }).count(), 0)
+    assert.equal(await page.getByRole('heading', { name: 'Янгантау: этно и гастро' }).count(), 0)
+    await imageReady(family.locator('img'))
+    await family.click()
+    await page.getByRole('heading', { name: 'Иремель для всей семьи', exact: true }).waitFor()
+    await page.getByRole('button', { name: 'Маршрут', exact: true }).click()
+    await imageReady(page.locator('figure img').first())
+    await visible(page.getByRole('button', { name: 'Забронировать', exact: true })).click()
+    await page.getByRole('heading', { name: 'Бронирование', exact: true }).waitFor()
+    const date = await page.getByText('Дата отправления', { exact: true }).locator('..').locator('.nums, .text-base').innerText()
+    const forward = visible(page.getByRole('button', { name: 'Перейти к оплате' }))
+    assert.equal(await forward.isDisabled(), true)
+    await page.getByText('Дети', { exact: true }).locator('..').getByRole('button', { name: '+', exact: true }).click()
+    await page.getByPlaceholder('Возраст').fill('')
+    await page.getByRole('checkbox').check()
+    assert.equal(await forward.isDisabled(), true)
+    await page.getByPlaceholder('Возраст').fill('7')
+    await forward.click()
+    await page.getByRole('heading', { name: 'Оплата', exact: true }).waitFor()
+    await page.getByText('2 взрослых, 1 ребёнок', { exact: true }).waitFor()
+    await page.getByText(date, { exact: true }).waitFor()
+    await imageReady(page.getByAltText('Демонстрационный QR-код'))
+    await visible(page.getByRole('button', { name: 'Оплатить (демо)' })).click()
+    await page.getByRole('heading', { name: 'Оплата прошла' }).waitFor()
+    await page.reload()
+    await page.getByRole('heading', { name: 'Оплата прошла' }).waitFor()
+    await page.getByText('2 взрослых, 1 ребёнок', { exact: true }).waitFor()
+    await page.getByRole('link', { name: 'Перейти в альбом поездки' }).click()
+    await page.getByRole('heading', { name: 'Альбом поездки' }).waitFor()
+    const own = page.getByAltText('Фото из поездки', { exact: true })
+    assert.equal(await own.count(), 3)
+    for (const image of await own.all()) await imageReady(image)
+    await page.getByRole('switch', { name: 'Показать группе' }).click()
+    const group = page.getByAltText(/Фото от /)
+    assert.equal(await group.count(), 4)
+    for (const image of await group.all()) await imageReady(image)
+    await page.screenshot({ path: join(dir, `album-${name}.png`) })
+    await page.locator('input[type=file]').setInputFiles(join(dir, `catalog-${name}.png`))
+    await imageReady(own.nth(3))
+    await page.reload()
+    await imageReady(own.nth(3))
+    await page.getByRole('link', { name: 'Открыть памятку' }).click()
+    await page.getByRole('button', { name: 'Скачать PDF' }).waitFor()
+    await page.getByText(/Ребёнок 7 лет/i).first().waitFor()
+    const downloaded = page.waitForEvent('download')
+    await page.getByRole('button', { name: 'Скачать PDF' }).click()
+    const pdf = join(dir, `${name}.pdf`)
+    await (await downloaded).saveAs(pdf)
+    const bytes = await readFile(pdf)
+    assert.equal(bytes.subarray(0, 4).toString(), '%PDF')
+    if (process.env.PDFTOTEXT) {
+      const text = execFileSync(process.env.PDFTOTEXT, ['-enc', 'UTF-8', pdf, '-'], { encoding: 'utf8' })
+      assert.match(text, /Иремель для всей семьи/)
+      assert.match(text, /Ребёнок 7 лет/i)
+    }
+    const icsDownload = page.waitForEvent('download')
+    await page.getByRole('button', { name: 'Добавить в календарь' }).click()
+    const ics = join(dir, `${name}.ics`)
+    await (await icsDownload).saveAs(ics)
+    assert.match(await readFile(ics, 'utf8'), /BEGIN:VCALENDAR\r\n[\s\S]+SUMMARY:Иремель для всей семьи/)
+    assert.deepEqual(errors, [])
+    assert.deepEqual(external, [])
+    assert.deepEqual(httpErrors, [])
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true)
+    console.log(`${name}: investor journey passed in ${((Date.now() - started) / 1000).toFixed(1)}s; no JS errors, external requests or failed HTTP responses`)
+    await context.close()
+  }
+} finally {
+  await browser.close()
+}
